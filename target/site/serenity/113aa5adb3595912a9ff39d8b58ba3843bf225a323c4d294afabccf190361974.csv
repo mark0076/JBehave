@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Signup basics","Type invalid year","SUCCESS","2019-11-28T02:11:44.7054977+03:00[Europe/Moscow]","0.0","17.99"
+"Signup basics","Type invalid email","SUCCESS","2019-11-28T02:12:04.5107028+03:00[Europe/Moscow]","0.0","10.14"
+"Signup basics","Sign up with empty password","SUCCESS","2019-11-28T02:12:16.0902488+03:00[Europe/Moscow]","0.0","12.5"
+"Signup basics","Type invalid values","SUCCESS","2019-11-28T02:12:30.1476275+03:00[Europe/Moscow]","0.0","12.58"

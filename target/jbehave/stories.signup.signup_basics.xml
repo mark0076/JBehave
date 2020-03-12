@@ -1,0 +1,51 @@
+<story path="stories/signup/signup_basics.story" title="">
+<lifecycle keyword="Lifecycle:">
+<before keyword="Before:">
+<scope keyword="Scope:" value="SCENARIO">
+<step>Given I open signup page</step>
+</scope>
+</before>
+</lifecycle>
+<scenario keyword="Scenario:" title="Type invalid year">
+<step outcome="successful">Given I open signup page</step>
+<step outcome="successful">When I set date:
+<parameter><parameters>
+<names><name>month</name><name>day</name><name>year</name></names>
+<values><value>April</value><value>28</value><value>94</value></values>
+<values><value>March</value><value>11</value><value>98</value></values>
+</parameters>
+</parameter></step>
+<step outcome="successful">And I set share</step>
+<step outcome="successful">And I click signup button</step>
+<step outcome="successful">Then I  see error &quot;Please enter a valid year.&quot;</step>
+<step outcome="successful">And I do not see error &quot;Please enter your birth month.&quot;</step>
+</scenario>
+<scenario keyword="Scenario:" title="Type invalid email">
+<step outcome="successful">Given I open signup page</step>
+<step outcome="successful">When I type confirmation email &quot;12312@FS.e&quot;</step>
+<step outcome="successful">And I type email &quot;ram@mfa.eedas&quot;</step>
+<step outcome="successful">And I click signup button</step>
+<step outcome="successful">Then I see error &quot;Email address doesn&apos;t match.&quot;</step>
+</scenario>
+<scenario keyword="Scenario:" title="Sign up with empty password">
+<step outcome="successful">Given I open signup page</step>
+<step outcome="successful">Given I open signup page</step>
+<step outcome="successful">When I type email &quot;dsad@fsd.re&quot;</step>
+<step outcome="successful">And I type confirmation email &quot;dasdsa@fsd.ew&quot;</step>
+<step outcome="successful">And I type nickname &quot;dadas&quot;</step>
+<step outcome="successful">And I click signup button</step>
+<step outcome="successful">Then I see error &quot;Enter a password to continue.&quot;</step>
+</scenario>
+<scenario keyword="Scenario:" title="Type invalid values">
+<step outcome="successful">Given I open signup page</step>
+<step outcome="successful">Given I open signup page</step>
+<step outcome="successful">When I select gender &quot;Non-binary&quot;</step>
+<step outcome="successful">And I type email &quot;djasm@rw.da&quot;</step>
+<step outcome="successful">And I type confirmation email &quot;dasdas@das.sa&quot;</step>
+<step outcome="successful">And I type nickname &quot;dad2&quot;</step>
+<step outcome="successful">And I set share</step>
+<step outcome="successful">And I click signup button</step>
+<step outcome="successful">Then I see &quot;6&quot; errors</step>
+<step outcome="successful">And I see that &quot;1&quot; error has text &quot;Email address doesn&apos;t match.&quot;</step>
+</scenario>
+</story>

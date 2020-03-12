@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Thu Nov 28 02:12:44 MSK 2019
+total=59000
+threadAverage=59000
+threads=1
+stories/signup/signup_basics.story=59000
